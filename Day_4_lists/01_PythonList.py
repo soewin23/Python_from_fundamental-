@@ -11,7 +11,7 @@
 
 """Lists are created using square brackets:"""
 
-thisislist = ["apple","banana","apple" ,"orange", "mango"]
+thisislist = ["apple","banana","opple" ,"orange", "mango"]
 print(type(thisislist))
 print(thisislist)
 
@@ -32,5 +32,15 @@ print(len(new))
 
 # A list can contain different data types:
 
-n =["new", 17, True, 12.23]
+n =["new", 17, True, 12.23, 12.4j]
+print(n[0])
+print(type(n[0]))
+print(n[1])
+print(type(n[1]))
+print(n[2])
+print(type(n[2]))
+print(n[3])
+print(type(n[3]))
+print(n[4])
+print(type(n[4]))
 
