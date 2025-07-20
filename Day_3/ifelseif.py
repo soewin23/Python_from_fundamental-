@@ -1,3 +1,24 @@
+# Python Conditions and If statements
+
+# An "if statement" is written by using the if keyword.
+
+# Example of if statement
+
+"""a = 33
+b = 200
+if b > a:
+  print("b is greater than a")
+"""
+            # Elif
+# The elif keyword is Python's way of saying "if the previous conditions were not true, then try this condition".
+
+# Example
+
+
+#                   Else
+# The else keyword catches anything which isn't
+# caught by the preceding conditions.
+
 
 print("Grading system")
 
