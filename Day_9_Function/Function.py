@@ -63,6 +63,10 @@ def my_function(**kid):
 
 my_function(fname = "Tobias", lname = "Refsnes")
 
+def n(**keys):
+    print(keys)
+n(hi = "hi",ad= 12)
+
 
 """Default Parameter Value"""
 # f we call the function without argument, it uses the default value:
@@ -97,11 +101,28 @@ def function(a):
     return a +1
 print(function(19))# here print is necessary
 
+print("----")
+
 # The pass Statement
 # for some reason function can't be empty 
 # for that we use pass statement
 
 def a():
     pass
-# Positional-Only Arguments
+""" Positional-Only Arguments"""
+# When a function uses positional-only arguments, it means:
 
+# 👉 You must pass the values by position, not by using the name of the argument.
+def positional(x , y, /):
+    return x + y
+print(positional(12,13))# we can only add positional argument not keyword argument
+print("-------")
+
+
+# Keyword-Only Arguments
+# To specify that a function can have only keyword arguments, add *, before the arguments:
+
+def keyonly(*, a):
+    return a *3
+print(keyonly(a=12)) #we can only add argument argument not keyword positional
+print("---")
