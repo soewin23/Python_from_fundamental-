@@ -109,13 +109,15 @@ print("----")
 
 def a():
     pass
+
+
 """ Positional-Only Arguments"""
 # When a function uses positional-only arguments, it means:
 
 # 👉 You must pass the values by position, not by using the name of the argument.
 def positional(x , y, /):
     return x + y
-print(positional(12,13))# we can only add positional argument not keyword argument
+print(positional(1,12))# we can only add positional argument not keyword argument
 print("-------")
 
 
@@ -124,5 +126,35 @@ print("-------")
 
 def keyonly(*, a):
     return a *3
-print(keyonly(a=12)) #we can only add argument argument not keyword positional
-print("---")
+print(keyonly(a= 12)) #we can only add argument argument not keyword positional
+print("-------")
+
+
+
+"""To combine Positional_ONly and Keyword_only argument"""
+
+# Any argument before the / , are positional-only,
+# and any argument after the *, are keyword-only.
+  
+
+# def Pos_Key(a,b,c,/,*,d,e,f):
+#     return a,b,c,d,e,f
+# print(Pos_Key(1,2,3,d=4,e=5,f=6))
+
+def A(a,b,c,/,*,d,e,f):
+    return (a+b+c)*(d+e+f)
+print(A(20,69,90,d=56,e=79,f=50))
+print("---------")
+
+ # Recursion
+"""Calling a function from itself"""
+#for recursion limit
+def recursion(i):
+    if i > 0:
+        result = i + recursion(i -1) #--> recursion(i-1)== recursion(2)
+        print(result)
+    else:
+        result = 0
+    return result
+print("Recursion Example of Result ")
+recursion(12)
