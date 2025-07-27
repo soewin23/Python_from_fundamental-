@@ -16,3 +16,4 @@ print(square)
 for i in lis:
     A.append(i **2)
 print(A)
+print("---")
