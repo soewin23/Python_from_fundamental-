@@ -10,3 +10,11 @@ even = tuple(filter(lambda i: i%2==0,num))#filter() applies this condition to ea
 # Only numbers where the condition is True are kept.
 print(even) #(2, 4, 6, 8, 10)
 
+a = []
+for i in range(1,11):
+    a.append(i**2)
+evens= list(filter(lambda i: i%2==0,a))#filter() applies this condition to each number.
+print(evens)
+print(a)
+
+
