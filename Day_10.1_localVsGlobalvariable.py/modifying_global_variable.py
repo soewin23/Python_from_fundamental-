@@ -29,3 +29,13 @@ def fill_even():
             even_numbers.append(i)
 fill_even()   
 print(even_numbers)
+
+
+limit =[]
+def even_num(A):
+    global limit
+    for i in range (1, A +1):
+        if i % 2 ==0:
+            limit.append(i)
+even_num(12)
+print(limit)
