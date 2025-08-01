@@ -1,6 +1,6 @@
- # Grade analyzer
+#  # Grade analyzer
 
-def claculate_Grade(score):
+def grade_calculator(score):
     if score > 100:
         return "Invalid score"
     elif score >= 80:
@@ -14,14 +14,32 @@ def claculate_Grade(score):
 students ={}
 
 while True:
-    name = input("Enter student name (or 'done' to finish) : ")
-    if name.lower() == 'done':
+    name = input("\n Enter a name ( or Enter 'quit' to exit)")
+    if name.lower() == "quit":
         break
-    score = input(f"Enter {name}'s score (0-100) : ")
-    if not score.isdigit() or (0 <= int(score) > 100):
-        print("Invalid score. Please enter a number from 0 to 100.")
+    score = input(f"\nEnter {name}'s score :")
+    if not score.isdigit() or (0 <= int(score) >= 100):
+        print(f"{score}'s is invalid synthx, Please Enter a number between (0 to 100): ")
         continue
-
     students[name] = int(score)
-    print(students)
-    break
+
+print("\nStudent grade : ")
+for name , score in students.items():
+    grade = grade_calculator(score)
+    print(f"Student name = {name} : score = {score} : Grade = {grade}")
+
+if students:
+    print("Average score of the Calss")
+    avg = sum(students.values()) / len(students)
+    print(f'\n Calss average score = {avg}')
+else:
+    print("\nNO student entered ")
+
+while True:
+    lookup = input("\nEnter a student name to check thier grade (or Enter 'exit' to quit) : ")
+    if lookup.lower() == "exit":
+        break
+    if lookup in students:
+        print(f"{lookup}'s grade : {grade_calculator(students[lookup])}")
+    else:
+        print("Student is not found ")
